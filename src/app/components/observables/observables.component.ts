@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-observables',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObservablesComponent implements OnInit {
 
-  constructor() { }
+  films: any = [];
+
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.getfilms();
+  }
+
+  getfilms(){
+    const url = "https://swapi.co/api/films"
+
+    let headers = new HttpHeaders({
+      'content-type': 'application/json'
+    });
+
+    this.http.get(url, {headers}).subscribe({
+      next: res=> {
+        this.films = res,
+        console.log(this.films);
+      },
+      error: xhr => console.error(xhr.statusText),
+      complete() { console.log('finished.'); }
+    });
   }
 
 }

@@ -6,7 +6,7 @@ import { ObservablesComponent } from './components/observables/observables.compo
 
 const routes: Routes = [
   { path: 'observables', component: ObservablesComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/observables', pathMatch: 'full' },
 ];
 
 @NgModule({
