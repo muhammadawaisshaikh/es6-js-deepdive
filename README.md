@@ -11,7 +11,9 @@ Observables are like Promises, except they work with multiple values, they clean
 An Observable is like a Stream (in many languages) and allows to pass 0, 1, or more events where the callback is called for each event. They deal with a sequence of asynchronous events.
 
 # Dependency Injection
-
 Car
 Car > Engine > Pistons
 Car > Wheels
+
+# closure
+A closure is an inner function that has access to the outer (enclosing) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function’s variables, and it has access to the global variables.

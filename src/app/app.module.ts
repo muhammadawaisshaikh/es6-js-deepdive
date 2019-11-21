@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ObservablesComponent } from './components/observables/observables.component';
 import { DependencyInjectionComponent } from './components/dependency-injection/dependency-injection.component';
+import { ClosureComponent } from './components/closure/closure.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ObservablesComponent,
-    DependencyInjectionComponent
+    DependencyInjectionComponent,
+    ClosureComponent
   ],
   imports: [
     BrowserModule,
